@@ -1,55 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTMLtask</title>
-    <link rel="icon" href="http://faviconka.ru/ico/faviconka_ru_1228.png" type="image/x-icon" />
-    <link rel="shortcut icon" href="http://faviconka.ru/ico/faviconka_ru_1228.png" type="image/x-icon" />
-</head>
-<body>
-    <main style="max-width: 1024px;">
-     <header>
-       <h1>Potential Frontend Developer</h1>
-       <img src="me.jpg" alt="it's me)" width="400px" height="500px">
-     </header>
-     <section>
-         <h2>My resume</h2>
-         <ol>
-             <li>Ilya Berzhanin</li>
-             <li>My email: 19berkut94@gmail.com</li>
-             <li>My aim is to become a high-qualified specialist in Frontend Development.
-                  Being satisfied in my work is very important for me. There too many plans
-                   and desires in life to realize and I hope working in this sphere can help me to do it.
-                    At this moment I haven’t finished the courses but I do my best, I am purposeful and never
-                     leave the problem until its finishing, always ready to act in stressful situations and
-                      rapidly changing conditions, I’m also able to learn great amount of information
-                       in short terms.</li>
-             <li>HTML, CSS, JavaScript.</li>
-             <li>I suppose I have no code examples to be proud of now.</li>
-             <li>Unfortenately, I can create only simple pages and modal winds.</li>
-             <li>I am at up-skill-lab course now.</li>
-             <li>As concerns my english level I think it is between B1 and B2 levels
-                  and because of lack of speech practice it takes me some time to get
-                   used to speak fluently.</li>
-         </ol>
-     </section>
-     <figure>
-         <img src="https://w3.chabad.org/media/images/1097/EQOq10973965.jpg?_i=_n504BC99DD0473598AAE3BCDC5D75568D" alt="Thans for help">
-         <figcaption><em>Be kind and helpful)</em></figcaption>
-     </figure>
-     <form action="" method="POST">
-         <p>Please write what u think about me</p>
-         <textarea name="" id="" cols="50" rows="10"></textarea>
-          <input type="button" value="leave the comment">
-          <input type="reset" value="reset">
-     </form>
-</main>
-<footer>
-    <address>
-        <p>U can write me here: <a href="https://mail.google.com/">19berkut94@gmail.com</a></p>
-        <p>And this is my repository: <a href="https://github.com/19berkut94/rsschool-cv/tree/main">https://github.com/19berkut94/rsschool-cv/tree/main</a></p>
-    </address>
-</footer>
-</body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Fredericka+the+Great&family=Holtwood+One+SC&family=Indie+Flower&family=Zilla+Slab+Highlight:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="icon"
+      href="http://faviconka.ru/ico/faviconka_ru_1228.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="http://faviconka.ru/ico/faviconka_ru_1228.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <nav class="nav">
+          <div class="inside-nav">
+            <img
+              src="https://webstockreview.net/images/mail-clipart-small-icon-png-1.png"
+              alt=""
+            />
+            <a href="https://mail.google.com/">19berkut94@gmail.com</a>
+          </div>
+          <div class="inside-nav">
+            <img
+              src="https://banner2.cleanpng.com/20190425/kuy/kisspng-computer-icons-github-clip-art-transparency-free-c-ebess-uq-undergrate-electrical-engineering-stude-5cc270f9d845d4.1334546315562467778859.jpg"
+              alt=""
+            />
+            <a href="https://github.com/19berkut94">github.com/19berkut94</a>
+          </div>
+          <div class="inside-nav">
+            <img
+              src="https://icon-library.com/images/small-telephone-icon/small-telephone-icon-18.jpg"
+              alt=""
+            />
+            <a href="#">+375445830360</a>
+          </div>
+        </nav>
+        <div class="name-logo">
+          <img src="me.jpg" alt="it's me)" />
+          <h1>Berzhanin Ilya</h1>
+        </div>
+      </header>
+      <p class="obj animate__animated animate__bounceInLeft">
+        <strong>OBJECTIVE: </strong>Junior Front-End Developer
+      </p>
+      <section class="section">
+        <h2>my profile</h2>
+        <article class="article">
+          My aim is to become a high-qualified specialist in Frontend
+          Development. Being satisfied in my work is very important for me.
+          There too many plans and desires in life to realize and I hope working
+          in this sphere can help me to do it. At this moment I haven't finished
+          the courses but I do my best, I am purposeful and never leave the
+          problem until its finishing, always ready to act in stressful
+          situations and rapidly changing conditions, I'm also able to learn
+          great amount of information in short terms.
+        </article>
+      </section>
+
+      <div class="skills">
+        <div class="skill-item langs">
+          <h3>skills</h3>
+          <a href="#">html</a>
+          <a href="#">css</a>
+          <a href="#">js</a>
+        </div>
+        <div class="skill-item">
+          <h3>code examples</h3>
+          <p>I suppose I have no code examples to be proud of now.</p>
+        </div>
+        <div class="skill-item">
+          <h3>experience</h3>
+          <p>Unfortenately, I can create only simple pages and modal winds.</p>
+        </div>
+        <div class="skill-item">
+          <h3>courses</h3>
+          <p>I am at up-skill-lab course now.</p>
+        </div>
+      </div>
+      <section class="english-section">
+        <h4>language</h4>
+        <article class="article english">
+          As concerns my english level I think it is between B1 and B2 levels
+          and because of lack of speech practice it takes me some time to get
+          used to speak fluently.
+        </article>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>
