@@ -3,10 +3,12 @@ body {
   margin: 0 auto;
 }
 
+/*-----------------creating of header-----------------------*/
+
 .header {
   display: flex;
   justify-content: space-around;
-  background: linear-gradient(rgb(225, 232, 235) 30%,  white);
+  background: linear-gradient(rgb(225, 232, 235) 30%, white);
   padding-top: 30px;
 }
 
@@ -16,42 +18,45 @@ body {
   border-radius: 50%;
 }
 
-.inside-nav img {
+.header__nav__item img {
   width: 30px;
   height: 30px;
 }
 
-.inside-nav {
+.header__nav__item {
   padding-top: 20px;
   display: flex;
   align-items: center;
 }
 
-.inside-nav a {
+.header__nav__item a {
   text-decoration: none;
   color: black;
   font-size: 20px;
   padding-left: 5px;
 }
 
-.name-logo {
-    text-transform: uppercase;
-    font-family: 'Arbutus Slab', serif;
+.header__logo-name {
+  text-transform: uppercase;
+  font-family: "Arbutus Slab", serif;
   text-align: center;
 }
 
-.obj{
-    color: white;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Holtwood One SC', serif;
-    text-shadow: 0px 0px 6px rgba(129, 71, 71, 0.7);
-    --animate-duration: 3s;
-  --animate-delay: 1s;
+/*----------------------------here appears animated text-------------------------------*/
 
+.objective {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Holtwood One SC", serif;
+  text-shadow: 0px 0px 6px rgba(68, 37, 37, 0.7);
+  --animate-duration: 3s;
+  --animate-delay: 1s;
 }
 
-.section {
+/*----------------------------creation of profile section---------------------------------*/
+
+.profile-section {
   margin-top: 60px;
   border-top: 2px solid;
   border-color: rgb(136, 136, 139);
@@ -59,16 +64,18 @@ body {
 }
 
 h2 {
-    font-family: 'Zilla Slab Highlight', cursive;
+  font-family: "Zilla Slab Highlight", cursive;
   text-align: center;
   text-transform: uppercase;
 }
 
-.article {
-    font-family: 'Indie Flower', cursive;
+.profile-section__article {
+  font-family: "Indie Flower", cursive;
   text-indent: 5%;
   font-size: 22px;
 }
+
+/*-------------------------------------creation of skills---------------------------------------*/
 
 .skills {
   display: flex;
@@ -77,7 +84,7 @@ h2 {
   justify-content: space-around;
 }
 
-.skill-item {
+.skills__item {
   width: 40%;
   height: 200px;
   border: 5px solid;
@@ -86,32 +93,31 @@ h2 {
   margin: 20px 0;
   border-radius: 20px;
   transition: transform 1s linear;
-  
 }
 
-.skill-item:hover{
-transform: scale(1.2);
+.skills__item:hover {
+  transform: scale(1.2);
 }
 
 h3 {
-    font-family: 'Fredericka the Great', cursive;
+  font-family: "Fredericka the Great", cursive;
   font-size: 24px;
   text-transform: uppercase;
 }
 
-.skill-item p {
+.skills__item p {
   text-align: center;
   padding: 0 20px;
   line-height: 30px;
   font-size: 24px;
 }
 
-.langs {
+.languages {
   display: flex;
   flex-direction: column;
 }
 
-.langs a {
+.languages a {
   text-decoration: none;
   font-size: 20px;
   color: black;
@@ -122,26 +128,28 @@ h3 {
   height: 30px;
   padding: 5px;
   border-radius: 3px;
-  transition: background  0.5s linear;
+  transition: background 0.5s linear;
 }
 
-.langs a:hover{
-    background: rgb(116, 24, 24);
-    color: white;
+.languages a:hover {
+  background: rgb(116, 24, 24);
+  color: white;
 }
 
-.langs :nth-child(2) {
+.languages :nth-child(2) {
   margin-top: 0;
 }
 
+/*----------------------------------creation of section about english language level------------------------*/
+
 h4 {
-    font-family: 'Zilla Slab Highlight', cursive;
+  font-family: "Zilla Slab Highlight", cursive;
   font-size: 26px;
   text-align: center;
   text-transform: uppercase;
 }
 
-.english {
+.english-section__article {
   padding: 0 100px;
   background: rgb(247, 215, 215);
   font-size: 22px;
@@ -153,5 +161,4 @@ h4 {
 
 .english-section {
   margin-top: 50px;
- 
 }
