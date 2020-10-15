@@ -1,0 +1,201 @@
+body {
+  margin: 0 auto;
+  position: absolute;
+}
+/*--------------creating header-----------*/
+.header {
+  height: 80px;
+  background: rgba(58, 60, 68, 0.61);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+/*---------left side----------*/
+.header-left-nav {
+  display: flex;
+  margin-left: 10px;
+}
+
+.header-left-nav__container {
+  margin-left: 10px;
+}
+
+.header-left-nav__container :nth-child(1) {
+  color: honeydew;
+}
+
+.header-left-nav__container :nth-child(3) {
+  color: rgb(216, 216, 216);
+}
+
+.header-left-nav__container :nth-child(3):hover {
+  color: rgb(110, 89, 89);
+}
+
+.header-left-nav__container :nth-child(4) {
+  color: honeydew;
+  background: rgba(41, 63, 58, 0.562);
+  padding: 3px;
+}
+
+.header-left-nav__container :nth-child(4):hover {
+  background: rgba(5, 126, 51, 0.651);
+  color: black;
+}
+
+.header-left-nav__left-image {
+  width: 30px;
+  height: 30px;
+}
+
+/*-------right side----------*/
+
+.header-right-nav img {
+  width: 30px;
+  height: 30px;
+  margin-right: 40px;
+  border: rgb(116, 99, 99) 2px solid;
+  padding: 3px;
+}
+
+.header-right-nav {
+  display: flex;
+  align-items: center;
+  margin-right: 90px;
+}
+
+.header-right-nav__container a {
+  margin-right: 20px;
+}
+
+/*change view button*/
+
+.header-right-nav__container :nth-child(1) {
+  color: honeydew;
+  background: rgb(94, 86, 86);
+  padding: 3px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.5s linear;
+}
+
+.header-right-nav__container :nth-last-of-type(odd):hover {
+  background: rgb(206, 201, 201);
+}
+
+/*sign up button*/
+
+.header-right-nav__container :nth-child(2) {
+  color: rgb(8, 8, 7);
+  background: rgb(99, 189, 104);
+  font-size: 18px;
+  padding: 3px;
+  border-radius: 5px;
+  transition: background 0.5s linear;
+}
+
+.header-right-nav__container :nth-child(2):hover {
+  background: rgb(14, 128, 48);
+}
+
+/*log in button*/
+
+.header-right-nav__container :nth-child(3) {
+  color: honeydew;
+  background: rgb(94, 86, 86);
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background 0.5s linear;
+}
+
+/*-----------------header finished------------------*/
+
+/*-----------------main content----------------*/
+
+/*------------h1 and figcaption-----------*/
+
+#main {
+  background: rgb(238, 236, 236);
+}
+
+#title {
+  text-align: center;
+  font-family: "ZCOOL XiaoWei", serif;
+  font-size: 46px;
+  padding-top: 40px;
+}
+
+#main p {
+  text-align: center;
+  font-family: "ZCOOL XiaoWei", serif;
+  font-size: 20px;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+}
+
+#img-div {
+  background: honeydew;
+  display: block;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#img-caption {
+  font-family: "ZCOOL XiaoWei", serif;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+/*----------section tribute info--------------*/
+
+h2 {
+  text-align: center;
+}
+
+#tribute-info {
+  text-align: left;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+#tribute-info li {
+  line-height: 30px;
+}
+
+#quote {
+  padding-top: 30px;
+}
+
+#quote p {
+  text-align: left;
+  font-style: italic;
+  line-height: 25px;
+}
+
+/*section finished*/
+
+/*----------reference--------*/
+
+#reference {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+#tribute-link {
+  text-decoration: underline;
+}
