@@ -1,0 +1,19 @@
+$base-grey: #2d303a;
+$header-border: #323746;
+$header-text: #ffffff;
+
+.header {
+  height: 8.9rem;
+  background: $base-grey;
+  border-bottom: $header-border 0.6rem solid;
+  color: $header-text;
+  display: flex;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,0 +1,79 @@
+$base-white: #f2f2f2;
+$services-portfolio--title-footer: #666d89;
+$text-color: #767e9e;
+
+.services {
+  background: $base-white;
+  border-bottom: 0.6rem solid #ffffff;
+}
+
+.services__title {
+  @include font;
+  font-weight: 900;
+  font-size: 3rem;
+  color: $services-portfolio--title-footer;
+  line-height: 3.6rem;
+  padding-top: 6rem;
+  margin-top: 0;
+}
+
+.services__summary {
+  @include font;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: $text-color;
+  text-align: justify;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 2.6rem;
+  padding-top: 4rem;
+}
+
+.services__item {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid $services-portfolio--title-footer;
+  border-radius: 50%;
+  margin-right: 2rem;
+  width: 6rem;
+  height: 6rem;
+  padding: 1.5rem;
+}
+
+.item__text h3 {
+  @include font;
+  font-weight: 900;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: $services-portfolio--title-footer;
+  margin-top: 0;
+  text-transform: capitalize;
+}
+
+.item__text p {
+  @include font;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  color: $text-color;
+  height: 7rem;
+  width: 22rem;
+  overflow: hidden;
+}

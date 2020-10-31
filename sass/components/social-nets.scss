@@ -1,0 +1,45 @@
+$services-portfolio--title-and-footer: #666D89;
+$base-white: #F2F2F2;
+
+.social-nets{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1rem solid $services-portfolio--title-and-footer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    transition: border-color 0.3s linear;
+
+    &:hover{
+        border-color: $base-white;
+        cursor: pointer;
+    }
+
+    &:nth-child(4){
+        margin-right: 0;
+    }
+}
+
+
+
+.svg-symbol{
+    transition: fill 0.1s linear;
+
+    &:hover{
+        fill: $base-white;
+        cursor: pointer;
+    }
+}
+
+// .svg-fill{
+//     fill: gold !important;
+// }

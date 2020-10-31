@@ -1,0 +1,29 @@
+@import "sass/base/normalize.scss";
+
+//Abstract
+
+@import "sass/abstract/constants.scss";
+@import "sass/abstract/mixin.scss";
+
+//Base
+
+@import "sass/base/base.scss";
+
+//Layouts
+
+@import "sass/layouts/header.scss";
+@import "sass/layouts/wrapper.scss";
+@import "sass/layouts/screen-main.scss";
+@import "sass/layouts/services.scss";
+@import "sass/layouts/portfolio.scss";
+@import "sass/layouts/footer.scss";
+@import "sass/layouts/screen-second.scss";
+
+//Components
+
+@import "sass/components/logo.scss";
+@import "sass/components/nav.scss";
+@import "sass/components/phones-main.scss";
+@import "sass/components/second-phones.scss";
+@import "sass/components/portfolio-tags.scss";
+@import "sass/components/social-nets.scss";

@@ -1,0 +1,22 @@
+$footer-bg: #2D303A;
+$services-portfolio--title-and-footer: #666D89;
+
+.footer{
+    background: $footer-bg;
+}
+
+.copyright{
+    @include font;
+    color: $services-portfolio--title-and-footer;
+    font-weight: 900;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    padding: 3rem 0;
+}
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}

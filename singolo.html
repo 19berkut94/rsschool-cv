@@ -3,95 +3,364 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="singolo.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Singolo</title>
   </head>
+
   <body>
     <header class="header">
-      <div class="wrapper">
+      <div class="wrapper header__wrapper">
         <div class="logo-container">
-          <h1 class="logo-title">singolo
-          <span class="logo-symbol">*</span>
-
-          </h1>
+          <h1 class="logo-title">singolo</h1>
+          <span class="logo-symbol">*</ы>
         </div>
         <nav class="header__navigation">
           <ul class="navigation">
-            <li>home</li>
-            <li>services</li>
-            <li>portfolio</li>
-            <li>about</li>
-            <li>contact</li>
+            <li class="navigation__item"><a class="navigation__link" href="#">home</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#">services</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#">portfolio</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#">about</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#">contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
+<!-- -------main screen------- -->
+
     <section class="screen">
-      <div class="wrapper">
-        <a href="#">left</a>
-        <div class="phones">
-          <div class="vertical-phone"></div>
-          <div class="horisontal-phone"></div>
+      <div class="wrapper screen-wrapper">
+
+        <div class="arrow-left"><svg width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="arrows" d="M15.3022 4.0077C16.2333 3.09077 16.2325 1.64471 15.3003 0.728736C14.3113 -0.242912 12.6634 -0.242912 11.6745 0.728737L0.955147 11.2608C-0.318384 12.5121 -0.318381 14.4879 0.955149 15.7392L11.6745 26.2713C12.6634 27.2429 14.3113 27.2429 15.3003 26.2713C16.2325 25.3553 16.2333 23.9092 15.3022 22.9923L7.93355 15.7366C6.66347 14.486 6.66347 12.514 7.93355 11.2634L15.3022 4.0077Z" fill="#E94348"/>
+          </svg>
         </div>
-        <a href="#">right</a>
+
+        <div class="phones">
+
+          <div class="vertical-phone-container">
+            <div class="vertical-phone">
+              <div class="camera-and-speaker">
+                <div class="camera"></div>
+                <div class="speaker"></div>
+              </div>
+              <div class="phone-screen">
+                <img class="vertical-display" src="img/phones/vertical-display.png" alt="vertical-display">
+              </div>
+               <div class="phone-button">
+                  <div class="phone-in-button"></div>
+               </div>
+          </div>
+          <img class="phone-shadow" src="img/phones/vertical-shadow.png" alt="shadow">
+          </div>
+         
+          <div class="horizontal-phone-container">
+            <div class="horizontal-phone">
+              <div class="camera-and-speaker">
+                <div class="camera"></div>
+                <div class="speaker"></div>
+              </div>
+              <div class="phone-screen">
+                <img class="horizontal-display" src="img/phones/horizontal-display.png" alt="horizontal-display">
+              </div>
+              <div class="phone-button">
+                <div class="phone-in-button"></div>
+              </div>
+            </div>
+            <div class="horizontal-phone-shadow"><img src="img/phones/horizontal-shadow.png" alt="horizontal-phone-shadow"></div>
+          </div>
+          
+        </div>
+
+        <div class="arrow-right">
+          <svg width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="arrows" d="M0.697849 22.9923C-0.233349 23.9092 -0.232514 25.3553 0.699743 26.2713C1.68867 27.2429 3.33657 27.2429 4.32549 26.2713L15.0449 15.7392C16.3184 14.4879 16.3184 12.5121 15.0449 11.2608L4.32549 0.728735C3.33657 -0.242913 1.68867 -0.242911 0.699746 0.728737C-0.232511 1.64471 -0.233347 3.09077 0.69785 4.00769L8.06645 11.2634C9.33653 12.514 9.33653 14.486 8.06645 15.7366L0.697849 22.9923Z" fill="#E94348"/>
+          </svg>
+        </div>
       </div>
     </section>
 
+<!-- second screen----------------------------------------------------------- -->
+
+    <div class="screen-second">
+      <div class="wrapper second-wrapper">
+
+        <div class="second-left-arrow">
+          <svg width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="arrows" d="M15.3022 4.0077C16.2333 3.09077 16.2325 1.64471 15.3003 0.728736C14.3113 -0.242912 12.6634 -0.242912 11.6745 0.728737L0.955147 11.2608C-0.318384 12.5121 -0.318381 14.4879 0.955149 15.7392L11.6745 26.2713C12.6634 27.2429 14.3113 27.2429 15.3003 26.2713C16.2325 25.3553 16.2333 23.9092 15.3022 22.9923L7.93355 15.7366C6.66347 14.486 6.66347 12.514 7.93355 11.2634L15.3022 4.0077Z" fill="#666D89"/>
+          </svg>
+        </div>
+
+        <div class="second-phones">
+
+          <!-- -------------second-left-phone--------------->
+
+          <div class="vertical-phone-container second-phone-container second-left-phone">
+            <div class="vertical-phone second-main-phone">
+              <div class="camera-and-speaker">
+                <div class="camera"></div>
+                <div class="speaker"></div>
+              </div>
+              <div class="phone-screen">
+                <img class="vertical-display" src="img/phones/vertical-display.png" alt="vertical-display">
+              </div>
+              <div class="phone-button">
+                <div class="phone-in-button"></div>
+              </div>
+            </div>
+            <img class="phone-shadow second-phone-shadow" src="img/phones/vertical-shadow.png" alt="shadow">
+          </div>
+      
+         <!-- --------------second-central-phone-------------- -->
+          <div class="vertical-phone-container second-phone-container">
+            <div class="vertical-phone second-main-phone">
+              <div class="camera-and-speaker">
+                <div class="camera"></div>
+                <div class="speaker"></div>
+              </div>
+              <div class="phone-screen">
+                <img class="vertical-display" src="img/phones/second-main-display.png" alt="vertical-display">
+              </div>
+              <div class="phone-button">
+                <div class="phone-in-button"></div>
+              </div>
+            </div>
+            <img class="phone-shadow second-phone-shadow" src="img/phones/vertical-shadow.png" alt="shadow">
+          </div>
+       <!-- ----------------second-right-phone-------------- -->
+
+          <div class="vertical-phone-container second-phone-container second-right-phone">
+            <div class="vertical-phone second-main-phone">
+              <div class="camera-and-speaker">
+                <div class="camera"></div>
+                <div class="speaker"></div>
+              </div>
+              <div class="phone-screen">
+                <img class="vertical-display" src="img/phones/vertical-display.png" alt="vertical-display">
+              </div>
+              <div class="phone-button">
+                <div class="phone-in-button"></div>
+              </div>
+            </div>
+            <img class="phone-shadow second-phone-shadow" src="img/phones/vertical-shadow.png" alt="shadow">
+          </div>
+
+        </div>
+
+        <div class="second-right-arrow">
+          <svg width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="arrows" d="M0.697849 22.9923C-0.233349 23.9092 -0.232514 25.3553 0.699743 26.2713C1.68867 27.2429 3.33657 27.2429 4.32549 26.2713L15.0449 15.7392C16.3184 14.4879 16.3184 12.5121 15.0449 11.2608L4.32549 0.728735C3.33657 -0.242913 1.68867 -0.242911 0.699746 0.728737C-0.232511 1.64471 -0.233347 3.09077 0.69785 4.00769L8.06645 11.2634C9.33653 12.514 9.33653 14.486 8.06645 15.7366L0.697849 22.9923Z" fill="#666D89"/>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+<!-- --------------------------------------------------------------------- -->
+
     <section class="services">
-      <div class="wrapper">
-        <h2>Our Services</h2>
-        <p>
+      <div class="wrapper services-wrapper">
+        <h2 class="services__title">Our Services</h2>
+        <p class="services__summary">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
           Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
           lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
           tortor mauris condimentum nibh.
         </p>
+
         <div class="layout-3-column">
+
           <div class="services__item">
             <div class="icon">
-              <img src="" alt="1" />
+              <img src="img/services/1.png" alt="1" />
             </div>
-            <div class="text">
-              <h3>Custom Design</h3>
+            <div class="item__text">
+              <h3>custom design</h3>
               <p>
                 Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
                 laoreet, viverra lacus ut, ultrices velit.
               </p>
             </div>
           </div>
+
+          <div class="services__item">
+            <div class="icon">
+              <img class="icon_image-2" src="img/services/2.png" alt="2" />
+            </div>
+            <div class="item__text">
+              <h3>inovative ideas</h3>
+              <p>
+                Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                laoreet, viverra lacus ut, ultrices velit.
+              </p>
+            </div>
+          </div>
+
+          <div class="services__item">
+            <div class="icon">
+              <img src="img/services/3.png" alt="3" />
+            </div>
+            <div class="item__text">
+              <h3>love is the answer</h3>
+              <p>
+                Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                laoreet, viverra lacus ut, ultrices velit.
+              </p>
+            </div>
+          </div>
+
+          <div class="services__item">
+          <div class="icon">
+            <img class="icon_image-4" src="img/services/4.png" alt="4" />
+          </div>  
+            <div class="item__text">
+              <h3>responsive layout</h3>
+              <p>
+                Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                laoreet, viverra lacus ut, ultrices velit.
+              </p>
+            </div>
+          </div>
+
+          <div class="services__item">
+            <div class="icon">
+              <img src="img/services/5.png" alt="5" />
+            </div>
+            <div class="item__text">
+              <h3>24 / 7 support</h3>
+              <p>
+                Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                laoreet, viverra lacus ut, ultrices velit.
+              </p>
+            </div>
+          </div>
+
+          <div class="services__item">
+            <div class="icon">
+              <img src="img/services/6.png" alt="6" />
+            </div>
+            <div class="item__text">
+              <h3>feel like a star</h3>
+              <p>
+                Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                laoreet, viverra lacus ut, ultrices velit.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <section class="portfolio">
-      <h2>Portfolio</h2>
-      <p>
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-        lacinia odio sem nec elit.
-      </p>
-      <div class="portfolio__tags">
-        <span class="tag">All</span>
-        <span class="tag">Web Design</span>
-        <span class="tag">Graphic Design</span>
-        <span class="tag">Artwork</span>
-      </div>
-      <div class="layout-4-column">
-         <div class="portfolio-picture">
-             <img src="" alt="1">
-         </div>
+      <div class="wrapper">
+        <h2 class="portfolio__title">Portfolio</h2>
+        <p class="portfolio__summary">
+          Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+          lacinia odio sem nec elit.
+        </p>
+
+        <div class="portfolio__tags">
+          <span class="tag">All</span>
+          <span class="tag">Web Design</span>
+          <span class="tag">Graphic Design</span>
+          <span class="tag">Artwork</span>
+        </div>
+
+        <div class="layout-4-column">
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-1.png" alt="1" />
+          </div>
+          
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-2.png" alt="2" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-3.png" alt="3" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-4.png" alt="4" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-5.png" alt="5" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-6.png" alt="6" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-7.png" alt="7" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-8.png" alt="8" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-9.png" alt="9" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-10.png" alt="10" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-11.png" alt="11" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-12.png" alt="12" />
+          </div>
+
+          <div class="portfolio-picture">
+            <img src="img/portfolio/portfolio-12.png" alt="12" />
+          </div>
+
+        </div>
       </div>
     </section>
 
     <footer class="footer">
-        <div class="wrapper">
-            <p>© Copyright 2013 </p>
-            <div class="social-nets">
-                <div class="social-nets__item"></div>
-                <div class="social-nets__item"></div>
-                <div class="social-nets__item"></div>
-                <div class="social-nets__item"></div>
-            </div>
+      <div class="wrapper footer-wrapper">
+        <span class="copyright">© Copyright 2013</span>
+
+        <div class="social-nets">
+
+          <div class="svg">
+            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg-symbol" d="M8 2.68382H5.71472C5.44464 2.68382 5.14288 3.02931 5.14288 3.49147V5.09602H8V7.38269H5.14288V14.25H2.4456V7.38269H0V5.09602H2.4456V3.75C2.4456 1.81987 3.82336 0.25 5.71472 0.25H8V2.68382Z" fill="#666D89"/>
+            </svg>
+          </div>
+              
+          <div class="svg">
+            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg-symbol" d="M11.6565 5.72432V3.33795H10.1722V5.72432H7.82873V7.23568H10.1722V9.62205H11.6565V7.23568H14V5.72432H11.6565ZM5.60365 2.97539C5.95611 4.23745 5.42382 5.55727 4.57594 5.80052C4.4786 5.82836 4.37752 5.84268 4.27566 5.84268C3.4987 5.84268 2.72878 5.0423 2.44381 3.93995C2.28461 3.32061 2.29742 2.77923 2.48021 2.25868C2.65988 1.74657 2.98235 1.4007 3.38856 1.28441C3.48621 1.25625 3.5876 1.24193 3.68915 1.24193C4.62718 1.24193 5.23009 1.63791 5.60365 2.97539ZM6.54168 10.9102C6.61026 12.0291 5.67051 12.8545 4.25941 12.9591C2.82612 13.0657 1.64624 12.4087 1.57749 11.2912C1.54422 10.7545 1.77622 10.228 2.22993 9.80914C2.69035 9.38452 3.32232 9.12266 4.0099 9.07111C4.09099 9.06586 4.1716 9.06252 4.25175 9.06252C5.57834 9.06252 6.47668 9.85655 6.54168 10.9102ZM0.742736 3.74093C0.742736 4.92902 1.13238 5.78684 1.90074 6.29084C2.52959 6.70336 3.26014 6.76509 3.63947 6.76509C3.73149 6.76509 3.80539 6.76159 3.85695 6.75809C3.85695 6.75809 3.73649 7.55609 4.31768 8.34598L4.29144 8.34582C3.28451 8.34582 0 8.55996 0 11.3094C0 14.107 3.01657 14.249 3.62166 14.249C3.669 14.249 3.69681 14.2481 3.69681 14.2481C3.70353 14.2483 3.7468 14.25 3.82039 14.25C4.20879 14.25 5.21275 14.2002 6.145 13.7388C7.35425 13.141 7.96793 12.1013 7.96793 10.6485C7.96793 9.24452 7.03319 8.40898 6.35091 7.79823C5.93439 7.42627 5.57459 7.10491 5.57459 6.79246C5.57459 6.47411 5.83737 6.23484 6.16968 5.93177C6.70791 5.44161 7.21504 4.744 7.21504 3.4253C7.21504 2.266 7.0674 1.48789 6.15812 0.994228C6.25295 0.94475 6.58808 0.908636 6.754 0.885409C7.24676 0.816841 7.96793 0.739046 7.96793 0.329227V0.25H4.37533C4.3394 0.250955 0.742736 0.386659 0.742736 3.74093Z" fill="#666D89"/>
+            </svg>
+          </div>
+              
+          <div class="svg">
+            <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg-symbol" d="M14 1.67039C13.4846 1.91146 12.9313 2.0742 12.3501 2.14755C12.9435 1.77263 13.3988 1.17879 13.6133 0.471485C13.0582 0.818478 12.4434 1.07078 11.7894 1.20656C11.2653 0.617697 10.5187 0.25 9.69272 0.25C8.10646 0.25 6.82044 1.60636 6.82044 3.27921C6.82044 3.51675 6.8457 3.74786 6.89485 3.96951C4.50785 3.84336 2.39081 2.63722 0.974522 0.804355C0.727239 1.25198 0.585565 1.77231 0.585565 2.32747C0.585565 3.3784 1.09261 4.30543 1.86322 4.84887C1.3927 4.83314 0.949566 4.69704 0.562283 4.47009C0.561979 4.48261 0.561979 4.49529 0.561979 4.50813C0.561979 5.97587 1.55233 7.2003 2.86604 7.47844C2.62531 7.54778 2.37148 7.58501 2.10928 7.58501C1.92439 7.58501 1.74467 7.56591 1.56907 7.5306C1.93459 8.73401 2.9957 9.61 4.2522 9.63423C3.269 10.447 2.03091 10.9312 0.685087 10.9312C0.453326 10.9312 0.224761 10.9168 0 10.8885C1.27096 11.7483 2.78037 12.25 4.403 12.25C9.68587 12.25 12.5752 7.63364 12.5752 3.63038C12.5752 3.49941 12.5725 3.36861 12.5668 3.23844C13.1281 2.81152 13.6149 2.27803 14 1.67039Z" fill="#666D89"/>
+            </svg>
+          </div>
+                
+          <div class="svg">
+            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg-symbol" d="M0.0787113 4.48402H3.07192V14.25H0.0787113V4.48402ZM3.17008 1.76788C3.17008 2.60642 2.55967 3.28561 1.55525 3.28561C0.610402 3.28561 0 2.60642 0 1.76788C0 0.908996 0.630157 0.25 1.59476 0.25C2.55967 0.25 3.15063 0.908996 3.17008 1.76788Z" fill="#666D89"/>
+              <path class="svg-symbol" d="M4.86295 7.5948C4.86295 6.37668 4.82375 5.35829 4.78455 4.47936H7.38342L7.52171 5.83743H7.58066C7.97438 5.19815 8.93929 4.25944 10.5541 4.25944C12.5231 4.25944 14 5.59778 14 8.47341V14.2453H11.0068V8.83312C11.0068 7.57477 10.5736 6.71635 9.49043 6.71635C8.66349 6.71635 8.17162 7.29536 7.95493 7.85449C7.87591 8.05407 7.85615 8.33395 7.85615 8.61351V14.2453H4.86295V7.5948Z" fill="#666D89"/>
+            </svg>
+          </div>
+                  
         </div>
+      </div>
     </footer>
   </body>
 </html>
