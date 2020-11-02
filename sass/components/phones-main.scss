@@ -7,6 +7,14 @@ $phone-camera: #eb5055;
 $phone-screen: #161616;
 $phone-screen-border: #c7c7c7;
 
+@mixin tablet-size {
+  transform: scale(0.75);
+}
+
+@mixin mobile-size {
+  transform: scale(0.367);
+}
+
 //phones-----general------------------------------
 .phones{
   display: flex;
@@ -23,6 +31,19 @@ $phone-screen-border: #c7c7c7;
   margin-left: 5.5rem;
   display: flex;
   flex-direction: row;
+  background-image: url(../../img/phones/vertical-shadow.png);
+  width: 24rem;
+  height: 48.3rem;
+  
+  @include media-laptop{
+    @include tablet-size;
+    margin: 0rem;
+  }
+
+  @include media-tablet{
+    @include mobile-size;
+    margin: 0;
+  }
 }
 
 .vertical-phone {
@@ -34,7 +55,7 @@ $phone-screen-border: #c7c7c7;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  position: relative;
+  align-self: flex-start;
   // box-shadow:
   //  0 0 0 rgb(184, 178, 178),
   // 0.5rem 0.5rem 0 rgb(184, 178, 178),
@@ -42,11 +63,6 @@ $phone-screen-border: #c7c7c7;
   // 1.5rem 1.5rem 0 rgb(184, 178, 178),
   // 2rem 2rem 0 rgb(184, 178, 178),
   // 2.5rem 2.5rem 0 rgb(184, 178, 178)
-}
-
-.phone-shadow {
-  z-index: -1;
-  position: absolute;
 }
 
 .camera-and-speaker {
@@ -107,12 +123,21 @@ $phone-screen-border: #c7c7c7;
 
 .horizontal-phone-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 57%;
-    height: 100%;
-    margin-right: 5rem;
+    flex-direction: row;
+    background-image: url(../../img/phones/horizontal-shadow2.png);
+    width: 24rem;
+    height: 48.3rem;
+    margin: 0 auto;
+    transform: rotate(90deg);
+
+    @include media-laptop{
+      transform: rotate(90deg) scale(0.75);
+    }
+
+    @include media-tablet{
+      transform: rotate(90deg) scale(0.367);
+    }
+
   }
   
   .horizontal-phone {
@@ -124,8 +149,8 @@ $phone-screen-border: #c7c7c7;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    position: relative;
-    transform: rotate(90deg);
+    align-self: flex-end;
+
     // box-shadow:
     //  0 0 0 rgb(184, 178, 178),
     // 0.5rem 0.5rem 0 rgb(184, 178, 178),
@@ -134,18 +159,7 @@ $phone-screen-border: #c7c7c7;
     // 2rem 2rem 0 rgb(184, 178, 178),
     // 2.5rem 2.5rem 0 rgb(184, 178, 178)
   }
-  
-  .horizontal-phone-shadow {
-    z-index: -1;
-    position: absolute;
-    margin-left: 3rem;
-    margin-top: 3rem;
-  }
-  .horizontal-phone-shadow img{
-    width: 100%;
-    height: 100%;
-  }
-  
+    
   .camera-and-speaker {
     display: flex;
     flex-direction: column;

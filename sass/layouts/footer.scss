@@ -12,6 +12,10 @@ $services-portfolio--title-and-footer: #666D89;
     font-size: 1.3rem;
     line-height: 1.8rem;
     padding: 3rem 0;
+
+    @include media-tablet{
+        display: none;
+    }
 }
 
 .footer-wrapper{
@@ -19,4 +23,8 @@ $services-portfolio--title-and-footer: #666D89;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+
+    @include media-laptop{
+        width: calc(100% - 8rem);
+    }
 }

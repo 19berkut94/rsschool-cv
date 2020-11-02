@@ -1,6 +1,12 @@
 $header-text: #ffffff;
 $base-red: #f06c64;
 
+.header__navigation{
+  @include media-tablet{
+    display: none;
+  }
+}
+
 .navigation {
   display: flex;
   flex-direction: row;

@@ -16,4 +16,12 @@ $header-text: #ffffff;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  
+  @include media-laptop{
+    padding: 0 4rem;
+  }
+
+  @include media-tablet{
+    padding: 0 2rem;
+  }
 }

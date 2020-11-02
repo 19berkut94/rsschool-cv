@@ -5,6 +5,11 @@ $base-white: #F2F2F2;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 3rem 0 ;
+
+    @include media-tablet{
+        margin: 0 auto;
+    }
 }
 
 .svg{

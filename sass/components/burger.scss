@@ -1,0 +1,45 @@
+$burger-line: #f2f2f2;
+$base-red: #f06c64;
+
+@mixin line {
+    width: 2.5rem;
+    height: 0.24rem;
+    background: $burger-line;
+    content: '';
+    border-radius: 0.5rem;
+    position: absolute;
+    &:hover{
+        background: $base-red;
+    }
+}
+
+.burger{
+    width: 2.5rem;
+    height: 2.1rem;
+    position: relative;
+    display: none;
+    &:hover{
+        cursor: pointer;
+    }
+
+    @include media-tablet{
+        display: block;
+    }
+
+    &::before {
+        @include line;
+        top: 0rem;
+        left: 0;
+    }
+ 
+    &::after {
+        @include line;
+        bottom: 0rem;
+        left: 0;
+    }
+}
+
+.burger__line{
+   @include line;
+   top: calc(50% - 0.12rem);
+}

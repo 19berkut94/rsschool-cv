@@ -8,6 +8,12 @@ $border-blue: #323746;
   border-bottom: 0.6rem solid $border-blue;
 }
 
+.portfolio-wrapper{
+  @include media-laptop{
+    max-width: calc(100% - 8rem);
+  }
+}
+
 .portfolio__title {
   @include font;
   color: $services-portfolio--title-and-footer;
@@ -34,6 +40,7 @@ $border-blue: #323746;
 }
 
 .portfolio-picture {
+  background-image: url(../../img/portfolio/portfolio-1.png);
   width: 22rem;
   height: 18.7rem;
   margin-top: 2rem;
@@ -46,4 +53,5 @@ $border-blue: #323746;
   &:nth-child(1n + 13){
       display: none;
   }
+
 }
