@@ -14,6 +14,26 @@
     }
 }
 
+.vertical-phone-container {
+    margin-left: 5.5rem;
+    display: flex;
+    flex-direction: row;
+    background-image: url(../../img/phones/vertical-shadow.png);
+    width: 24rem;
+    height: 48.3rem;
+    
+    @include media-laptop{
+      @include tablet-size;
+      margin: 0rem;
+    }
+  
+    @include media-tablet{
+      @include mobile-size;
+      margin: 0;
+    }
+    
+  }
+
 .second-phone-container{
     margin: 0rem;
 }

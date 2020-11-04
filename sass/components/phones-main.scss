@@ -15,34 +15,54 @@ $phone-screen-border: #c7c7c7;
   transform: scale(0.367);
 }
 
+
+
 //phones-----general------------------------------
 .phones{
   display: flex;
   flex-direction: row;
   padding-bottom: 2.5rem;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  position: relative;
+  
+  @include media-tablet{
+    padding-bottom: 0;
+  }
+
+  @include media-mobile{
+    justify-content: center;
+  }
 }
 
 
 //vertical phone-------------------------------------------------------------
 
-.vertical-phone-container {
-  margin-left: 5.5rem;
-  display: flex;
-  flex-direction: row;
-  background-image: url(../../img/phones/vertical-shadow.png);
-  width: 24rem;
-  height: 48.3rem;
-  
+.vertical-shadow{
+  position: absolute;
+
   @include media-laptop{
-    @include tablet-size;
-    margin: 0rem;
+    width: calc(24rem * 0.75);
+    height: calc(48.3rem * 0.75);
   }
 
   @include media-tablet{
-    @include mobile-size;
-    margin: 0;
+    width: calc(24rem * 0.367);
+    height: calc(48.3rem * 0.367);
+  }
+}
+
+.first-vertical-container{
+  width: 24rem;
+  height: 48.3rem;
+  @include media-laptop{
+    width: calc(24rem * 0.75);
+    height: calc(48.3rem * 0.75);
+  }
+
+  @include media-tablet{
+    width: calc(24rem * 0.367);
+    height: calc(48.3rem * 0.367);
   }
 }
 
@@ -56,13 +76,20 @@ $phone-screen-border: #c7c7c7;
   align-items: center;
   justify-content: space-around;
   align-self: flex-start;
-  // box-shadow:
-  //  0 0 0 rgb(184, 178, 178),
-  // 0.5rem 0.5rem 0 rgb(184, 178, 178),
-  // 1rem 1rem 0 rgb(184, 178, 178),
-  // 1.5rem 1.5rem 0 rgb(184, 178, 178),
-  // 2rem 2rem 0 rgb(184, 178, 178),
-  // 2.5rem 2.5rem 0 rgb(184, 178, 178)
+  position: relative;
+}
+
+.first-vertical-phone{
+  @include media-laptop{
+    width: calc(21.6rem * 0.75);
+    height: calc(45.8rem * 0.75);
+  }
+
+  @include media-tablet{
+    width: calc(21.6rem * 0.367);
+    height: calc(45.8rem * 0.367);
+    border-radius: 1rem;
+  }
 }
 
 .camera-and-speaker {
@@ -80,6 +107,20 @@ $phone-screen-border: #c7c7c7;
   margin: 1rem auto;
 }
 
+.first-camera{
+  @include media-laptop{
+    width: calc(0.394rem * 0.75);
+    height: calc(0.394rem * 0.75);
+    margin: 0.75rem auto;
+  }
+
+  @include media-tablet{
+    width: calc(0.394rem * 0.367);
+    height: calc(0.394rem * 0.367);
+    margin: 0.367rem auto;
+  }
+}
+
 .speaker {
   width: 3.6rem;
   height: 0.5rem;
@@ -88,12 +129,38 @@ $phone-screen-border: #c7c7c7;
   margin: 1rem auto;
 }
 
+.first-speaker{
+  @include media-laptop{
+    width: calc(3.6rem * 0.75);
+    height: calc(0.5rem * 0.75);
+    margin: 0.75rem auto;
+  }
+
+  @include media-tablet{
+    width: calc(3.6rem * 0.367);
+    height: calc(0.5rem * 0.367);
+    margin: 0.367rem auto;
+  }
+}
+
 .phone-screen {
   width: 18.8rem;
   height: 33.3rem;
   background: $phone-screen;
   border: 0.3rem solid $phone-screen-border;
   border-radius: 2%;
+}
+
+.first-phone-screen{
+  @include media-laptop{
+    width: calc(18.8rem * 0.75);
+    height: calc(33.3rem * 0.75);
+  }
+
+  @include media-tablet{
+    width: calc(18.8rem * 0.367);
+    height: calc(33.3rem * 0.367);
+  }
 }
 
 .vertical-display {
@@ -112,6 +179,18 @@ $phone-screen-border: #c7c7c7;
   cursor: pointer;
 }
 
+.first-phone-button{
+  @include media-laptop{
+    width: calc(4.2rem * 0.75);
+    height: calc(4.2rem * 0.75);
+  }
+
+  @include media-tablet{
+    width: calc(4.2rem * 0.367);
+    height: calc(4.2rem * 0.367);
+  }
+}
+
 .phone-in-button {
   width: 2rem;
   height: 2rem;
@@ -119,84 +198,150 @@ $phone-screen-border: #c7c7c7;
   border-radius: 20%;
 }
 
+.first-phone-in-button{
+  @include media-laptop{
+    width: calc(2rem * 0.75);
+    height: calc(2rem * 0.75);
+  }
+
+  @include media-tablet{
+    width: calc(2rem * 0.367);
+    height: calc(2rem * 0.367);
+    border: 0.1rem solid $phone-in-button;
+  }
+}
+
 //horizontal-phone----------------------------------------------------------
+
+.horizontal-shadow{
+  position: absolute;
+
+  @include media-laptop{
+    width: calc(48.3rem * 0.75);
+    height: calc(24rem * 0.75);
+  }
+
+  @include media-tablet{
+    width: calc(48.3rem * 0.367);
+    height: calc(24rem * 0.367);   
+  }
+}
 
 .horizontal-phone-container {
     display: flex;
     flex-direction: row;
-    background-image: url(../../img/phones/horizontal-shadow2.png);
-    width: 24rem;
-    height: 48.3rem;
-    margin: 0 auto;
-    transform: rotate(90deg);
+    height: 24rem;
+    width: 48.3rem;
+    
+    flex-shrink: 0;
+    align-self: center;   
 
     @include media-laptop{
-      transform: rotate(90deg) scale(0.75);
+      width: calc(48.3rem * 0.75);
+      height: calc(24rem * 0.75);
     }
 
     @include media-tablet{
-      transform: rotate(90deg) scale(0.367);
+      width: calc(48.3rem * 0.367);
+      height: calc(24rem * 0.367);   
     }
 
   }
   
   .horizontal-phone {
-    width: 21.6rem;
-    height: 45.8rem;
+    height: 21.6rem;
+    width: 45.8rem;
     background: $phone-color;
     border-radius: 2rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-around;
-    align-self: flex-end;
+    position: relative;
 
-    // box-shadow:
-    //  0 0 0 rgb(184, 178, 178),
-    // 0.5rem 0.5rem 0 rgb(184, 178, 178),
-    // 1rem 1rem 0 rgb(184, 178, 178),
-    // 1.5rem 1.5rem 0 rgb(184, 178, 178),
-    // 2rem 2rem 0 rgb(184, 178, 178),
-    // 2.5rem 2.5rem 0 rgb(184, 178, 178)
+    @include media-laptop{
+      width: calc(45.8rem * 0.75);
+      height: calc(21.6rem * 0.75);
+    }
+
+    @include media-tablet{
+      width: calc(45.8rem * 0.367);
+      height: calc(21.6rem * 0.367);
+      border-radius: 1rem;   
+    }
   }
     
-  .camera-and-speaker {
+  .camera-and-speaker_horizontal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
   }
   
-  .camera {
+  .camera_horizontal {
     background: $phone-camera;
     width: 0.394rem;
     height: 0.394rem;
     border-radius: 50%;
     box-shadow: 0 0 0.25rem 0.25rem $phone-outer-camera;
-    margin: 1rem auto;
+    margin: auto 1rem;
+
+    @include media-laptop{
+      width: calc(0.394rem * 0.75);
+      height: calc(0.394rem * 0.75);
+      margin: auto 0.75rem;
+    }
+
+    @include media-tablet{
+      width: calc(0.394rem * 0.367);
+      height: calc(0.394rem * 0.367);  
+      margin: auto 0.367rem; 
+    }
   }
   
-  .speaker {
-    width: 3.6rem;
-    height: 0.5rem;
+  .speaker_horizontal {
+    height: 3.6rem;
+    width: 0.5rem;
     background: $phone-speaker;
     border-radius: 20%;
-    margin: 1rem auto;
+    margin: auto 1rem;
+
+    @include media-laptop{
+      width: calc(0.5rem * 0.75);
+      height: calc(3.6rem * 0.75);
+      margin: auto 0.75rem;
+    }
+
+    @include media-tablet{
+      width: calc(0.5rem * 0.367);
+      height: calc(3.6rem * 0.367);   
+      margin: auto 0.367rem;
+    }
   }
   
-  .phone-screen {
-    width: 18.8rem;
-    height: 33.3rem;
+  .phone-screen_horizontal {
+    height: 18.8rem;
+    width: 33.3rem;
     background: $phone-screen;
     border: 0.3rem solid $phone-screen-border;
     border-radius: 2%;
+
+    @include media-laptop{
+      width: calc(33.3rem * 0.75);
+      height: calc(18.8rem * 0.75);
+    }
+
+    @include media-tablet{
+      width: calc(33.3rem * 0.367);
+      height: calc(18.8rem * 0.367);   
+    }
   }
   
-  .horizontal-display {
+  .horizontal-display_horizontal {
     width: 100%;
     height: 100%;
   }
   
-  .phone-button {
+  .phone-button_horizontal {
     width: 4.2rem;
     height: 4.2rem;
     background: $phone-button;
@@ -205,11 +350,32 @@ $phone-screen-border: #c7c7c7;
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
+
+    @include media-laptop{
+      width: calc(4.2rem * 0.75);
+      height: calc(4.2rem * 0.75);
+    }
+
+    @include media-tablet{
+      width: calc(4.2rem * 0.367);
+      height: calc(4.2rem * 0.367);   
+    }
   }
   
-  .phone-in-button {
+  .phone-in-button_horizontal {
     width: 2rem;
     height: 2rem;
     border: 0.2rem solid $phone-in-button;
     border-radius: 20%;
+
+    @include media-laptop{
+      width: calc(2rem * 0.75);
+      height: calc(2rem * 0.75);
+    }
+
+    @include media-tablet{
+      width: calc(2rem * 0.367);
+      height: calc(2rem * 0.367);
+      border: 0.1rem solid $phone-in-button;   
+    }
   }
