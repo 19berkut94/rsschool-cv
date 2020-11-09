@@ -67,6 +67,11 @@ $border-blue: #323746;
       display: none;
   }
 
+  @include media-large-screen{
+    width: 22rem;
+    height: 18.7rem;
+  }
+
   @include media-laptop{
     width: 26.5vw;
     height: 22vw;

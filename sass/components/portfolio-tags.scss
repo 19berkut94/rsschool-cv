@@ -1,4 +1,5 @@
 $text-color: #767e9e;
+$base-red: #f06c64;
 
 .portfolio__tags {
   display: flex;
@@ -21,4 +22,13 @@ $text-color: #767e9e;
     color: #ffffff;
     border-color: #ffffff;
   }
+}
+
+.tag_selected{
+  background-color: $base-red;
+  color: #ffffff;
+}
+
+.not-selected{
+  opacity: 0.9;
 }

@@ -406,6 +406,8 @@ header, main, section, article, footer {
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
+  transition: all 2s;
 }
 
 .header {
@@ -448,6 +450,7 @@ html {
   padding-bottom: 6.5rem;
   padding-top: 6rem;
   border-bottom: 0.6rem solid #EA676B;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -680,6 +683,13 @@ html {
   display: none;
 }
 
+@media (min-width: 1021px) {
+  .portfolio-picture {
+    width: 22rem;
+    height: 18.7rem;
+  }
+}
+
 @media (max-width: 1020px) {
   .portfolio-picture {
     width: 26.5vw;
@@ -754,6 +764,7 @@ html {
   background: #648BF0;
   padding-top: 4.5rem;
   padding-bottom: 6.5rem;
+  display: none;
 }
 
 @media (max-width: 1020px) {
@@ -798,6 +809,7 @@ html {
 }
 
 .burger {
+  z-index: 5;
   width: 2.5rem;
   height: 2.1rem;
   position: relative;
@@ -816,7 +828,7 @@ html {
 
 .burger::before {
   width: 2.5rem;
-  height: 0.24rem;
+  height: 0.2rem;
   background: #f2f2f2;
   content: '';
   border-radius: 0.5rem;
@@ -831,7 +843,7 @@ html {
 
 .burger::after {
   width: 2.5rem;
-  height: 0.24rem;
+  height: 0.2rem;
   background: #f2f2f2;
   content: '';
   border-radius: 0.5rem;
@@ -846,12 +858,12 @@ html {
 
 .burger__line {
   width: 2.5rem;
-  height: 0.24rem;
+  height: 0.2rem;
   background: #f2f2f2;
   content: '';
   border-radius: 0.5rem;
   position: absolute;
-  top: calc(50% - 0.12rem);
+  top: calc(50% - 0.1rem);
 }
 
 .burger__line:hover {
@@ -877,6 +889,7 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.03em;
+  color: #ffffff;
 }
 
 .logo-symbol {
@@ -920,6 +933,28 @@ html {
 .navigation__link:hover {
   color: #f06c64;
   text-decoration: underline;
+}
+
+.active {
+  color: #f06c64;
+  text-decoration: underline;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.screen-showed {
+  display: flex;
+}
+
+.absolution {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .phones {
@@ -1340,6 +1375,8 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 2.5rem;
+  padding-top: 3rem;
 }
 
 @media (max-width: 1020px) {
@@ -1462,6 +1499,15 @@ html {
   border-color: #ffffff;
 }
 
+.tag_selected {
+  background-color: #f06c64;
+  color: #ffffff;
+}
+
+.not-selected {
+  opacity: 0.9;
+}
+
 .social-nets {
   display: flex;
   justify-content: center;
@@ -1504,4 +1550,125 @@ html {
 .svg-symbol:hover {
   fill: #F2F2F2;
   cursor: pointer;
+}
+
+.overlay {
+  background: rgba(45, 48, 58, 0.6);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  background: #2d303a;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0rem;
+  height: 100%;
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.4rem 0 18.4rem;
+}
+
+.modal__logo__title {
+  font-size: 2rem;
+}
+
+.modal__nav {
+  display: flex;
+  flex-direction: column;
+  height: 26rem;
+  width: 19.5rem;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+.modal__nav__links {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  letter-spacing: -0.035rem;
+  color: #ffffff;
+  transition: all 0.3s linear;
+}
+
+.modal__nav__links:hover {
+  text-decoration: underline;
+  color: #f06c64;
+}
+
+@keyframes show {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30rem;
+  }
+}
+
+@keyframes hide {
+  0% {
+    width: 30rem;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.modal-appear {
+  animation-name: show;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.modal-disappear {
+  animation-name: hide;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes burgerOn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes burgerOff {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.burger-roll {
+  animation-name: burgerOn;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.burger-unroll {
+  animation-name: burgerOff;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }

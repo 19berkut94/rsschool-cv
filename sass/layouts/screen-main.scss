@@ -1,5 +1,7 @@
 $base-red: #F06C64;
 
+
+
 .screen{
     background: $base-red;
     display: flex;
@@ -7,7 +9,7 @@ $base-red: #F06C64;
     padding-bottom: 6.5rem;
     padding-top: 6rem;
     border-bottom: 0.6rem solid #EA676B;
-
+    display: none;
     @include media-tablet{
         height: 22rem;
         padding: 0rem;

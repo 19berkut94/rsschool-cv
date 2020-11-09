@@ -3,7 +3,7 @@ $base-red: #f06c64;
 
 @mixin line {
     width: 2.5rem;
-    height: 0.24rem;
+    height: 0.2rem;
     background: $burger-line;
     content: '';
     border-radius: 0.5rem;
@@ -14,6 +14,7 @@ $base-red: #f06c64;
 }
 
 .burger{
+    z-index: 5;
     width: 2.5rem;
     height: 2.1rem;
     position: relative;
@@ -41,5 +42,5 @@ $base-red: #f06c64;
 
 .burger__line{
    @include line;
-   top: calc(50% - 0.12rem);
+   top: calc(50% - 0.1rem);
 }

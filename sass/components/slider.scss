@@ -1,0 +1,16 @@
+.slider{
+    overflow: hidden;
+    position: relative;
+}
+
+.screen-showed{
+    display: flex;
+}
+
+.absolution{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+}

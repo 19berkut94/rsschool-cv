@@ -6,6 +6,9 @@ $mobile-width: 375px;
     font-family: "Lato", sans-serif;
 }
 
+@mixin media-large-screen{
+    @media (min-width: 1021px) { @content; }
+}
 
 @mixin media-laptop {
     @media (max-width: $content-width) { @content; }
