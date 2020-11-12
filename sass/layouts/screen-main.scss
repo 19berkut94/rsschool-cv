@@ -37,5 +37,10 @@ $base-red: #F06C64;
 }
 
 .arrow-left, .arrow-right{
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+        & .arrows {
+            fill: #9ee2e6;
+        }
+    }
 }

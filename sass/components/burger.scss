@@ -21,6 +21,9 @@ $base-red: #f06c64;
     display: none;
     &:hover{
         cursor: pointer;
+        &::before, &::after, .burger__line{
+            background: $base-red;
+        }
     }
 
     @include media-tablet{

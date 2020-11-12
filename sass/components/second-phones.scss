@@ -81,14 +81,11 @@
     }
 }
 
-.second-left-arrow{
+.second-left-arrow, .second-right-arrow{
     &:hover{
         cursor: pointer;
-    }
-}
-
-.second-right-arrow{
-    &:hover{
-        cursor: pointer;
+        & .arrows {
+            fill: #9ee2e6;
+        }
     }
 }

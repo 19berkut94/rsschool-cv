@@ -487,8 +487,12 @@ html {
   }
 }
 
-.arrow-left, .arrow-right {
+.arrow-left:hover, .arrow-right:hover {
   cursor: pointer;
+}
+
+.arrow-left:hover .arrows, .arrow-right:hover .arrows {
+  fill: #9ee2e6;
 }
 
 .services {
@@ -763,20 +767,20 @@ html {
 .screen-second {
   background: #648BF0;
   padding-top: 4.5rem;
-  padding-bottom: 6.5rem;
+  padding-bottom: 5.5rem;
   display: none;
 }
 
 @media (max-width: 1020px) {
   .screen-second {
-    height: 44.8rem;
+    height: 51.8rem;
     padding: 0rem;
   }
 }
 
 @media (max-width: 768px) {
   .screen-second {
-    height: 21.9rem;
+    height: 22rem;
     padding: 0rem;
   }
 }
@@ -818,6 +822,10 @@ html {
 
 .burger:hover {
   cursor: pointer;
+}
+
+.burger:hover::before, .burger:hover::after, .burger:hover .burger__line {
+  background: #f06c64;
 }
 
 @media (max-width: 768px) {
@@ -1468,12 +1476,12 @@ html {
   }
 }
 
-.second-left-arrow:hover {
+.second-left-arrow:hover, .second-right-arrow:hover {
   cursor: pointer;
 }
 
-.second-right-arrow:hover {
-  cursor: pointer;
+.second-left-arrow:hover .arrows, .second-right-arrow:hover .arrows {
+  fill: #9ee2e6;
 }
 
 .portfolio__tags {
@@ -1521,7 +1529,7 @@ html {
   }
 }
 
-.svg {
+.social-nets__svg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1534,22 +1542,22 @@ html {
   transition: border-color 0.3s linear;
 }
 
-.svg:hover {
+.social-nets__svg:hover {
   border-color: #F2F2F2;
   cursor: pointer;
 }
 
-.svg:nth-child(4) {
+.social-nets__svg:hover .svg-symbol {
+  fill: #F2F2F2;
+  cursor: pointer;
+}
+
+.social-nets__svg:nth-child(4) {
   margin-right: 0;
 }
 
 .svg-symbol {
   transition: fill 0.1s linear;
-}
-
-.svg-symbol:hover {
-  fill: #F2F2F2;
-  cursor: pointer;
 }
 
 .overlay {

@@ -15,14 +15,11 @@ window.onload = function () {
 
 const addTagsClickHandler = () => {
   document.querySelector(".portfolio__tags").addEventListener("click", (e) => {
-    if (e.target.classList.contains("tag")) {
+    if (e.target.getAttribute("class") === 'tag') {
       let clickedTag = e.target;
       removeSelectedTags();
       selectClickdeTag(clickedTag);
-
-      if (clickedTag.innerText != "All") {
-        changeImageOrder();
-      }
+       changeImageOrder()
     }
   });
 };
@@ -71,10 +68,13 @@ class ScreenAndButton {
     if ((this.display.style.opacity = 1)) {
       this.hide();
     } else {
-      this.show;
+      this.show();
     }
   }
 }
+
+
+
 
 //---------------------slider---------------------
 
@@ -83,6 +83,16 @@ const slideScreensWithPhones = function () {
   const buttonPrev = document.querySelectorAll("#arrow-previous");
   const screens = document.querySelectorAll("#slider section");
   let i = 0;
+
+  function getAway() {
+    if (i > 0) {
+      screens[i - 1].classList.remove("screen-showed");
+    } else {
+      screens[i + 1].classList.remove("screen-showed");
+    }
+
+    screens[i].classList.remove("absolution");
+  }
 
   buttonPrev.forEach((btn) => {
     btn.onclick = function () {
@@ -106,25 +116,32 @@ const slideScreensWithPhones = function () {
         { duration: 2000 }
       );
 
-      function getAway() {
-        screens[i].classList.remove("absolution");
-
-        screens[i - 1].classList.remove("screen-showed");
-      }
-
       setTimeout(getAway, 3000);
     };
   });
 
   buttonNext.forEach((el) => {
     el.onclick = function () {
-      screens[i].classList.remove("screen-showed");
+      screens[i].animate(
+        [{ transform: "translateX(0%)" }, { transform: "translateX(100%)" }],
+        { duration: 2000 }
+      );
+
+      //screens[i].classList.remove("screen-showed");
       i++;
       if (i >= screens.length) {
         i = 0;
       }
 
       screens[i].classList.add("screen-showed");
+      screens[i].classList.add("absolution");
+
+      screens[i].animate(
+        [{ transform: "translateX(-100%)" }, { transform: "translateX(0%)" }],
+        { duration: 2000 }
+      );
+
+      setTimeout(getAway, 3000);
     };
   });
 };

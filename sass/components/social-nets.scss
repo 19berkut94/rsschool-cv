@@ -12,7 +12,7 @@ $base-white: #F2F2F2;
     }
 }
 
-.svg{
+.social-nets__svg{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,6 +27,10 @@ $base-white: #F2F2F2;
     &:hover{
         border-color: $base-white;
         cursor: pointer;
+        & .svg-symbol{
+            fill: $base-white;
+            cursor: pointer;
+        }
     }
 
     &:nth-child(4){
@@ -38,11 +42,6 @@ $base-white: #F2F2F2;
 
 .svg-symbol{
     transition: fill 0.1s linear;
-
-    &:hover{
-        fill: $base-white;
-        cursor: pointer;
-    }
 }
 
 // .svg-fill{
