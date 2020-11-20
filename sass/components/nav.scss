@@ -17,26 +17,26 @@ $base-red: #f06c64;
     list-style-type: none;
     margin-left: 0;
   }
-}
 
-.navigation__item {
-  margin: 0 1.25rem;
-  @include font;
-  font-weight: 700;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
+  &__item {
+    margin: 0 1.25rem;
+    @include font;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
 
-.navigation__link {
-  text-decoration: none;
-  color: $header-text;
-  letter-spacing: -3.5%;
-  transition: all 0.5s linear;
-  letter-spacing: -0.035em;
-
-  &:hover {
-    color: $base-red;
-    text-decoration: underline;
+  &__link {
+    text-decoration: none;
+    color: $header-text;
+    letter-spacing: -3.5%;
+    transition: all 0.5s linear;
+    letter-spacing: -0.035em;
+  
+    &:hover {
+      color: $base-red;
+      text-decoration: underline;
+    }
   }
 }
 

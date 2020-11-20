@@ -18,9 +18,7 @@ class Modal {
     this.createDomNode();
     this.buildModal();
     this.createModalContent();
-    this.gatherTogether();
-    //this.modalOpen();
-    //  this.modalClose();
+    this.addModalToOverlay();
   }
 
   createDomNode(node, element, ...classes) {
@@ -114,7 +112,7 @@ class Modal {
     return this.modalContent;
   }
 
-  gatherTogether() {
+  addModalToOverlay() {
     this.modal.classList.add("modal-disappear");
 
     this.modal.append(this.modalContent);
@@ -122,13 +120,13 @@ class Modal {
     return this.overlay;
   }
 
-  modalOpen() {
+  openModal() {
     document.body.append(this.overlay);
     this.modal.classList.remove("modal-disappear");
     this.modal.classList.add("modal-appear");
   }
 
-  modalClose() {
+  closeModal() {
     this.modal.classList.add("modal-disappear");
     this.modal.classList.remove("modal-appear");
 
@@ -136,7 +134,6 @@ class Modal {
       document.body.removeChild(this.overlay);
       burger.style.position = "relative";
     });
-    //document.body.removeChild(this.overlay);
   }
 }
 
@@ -150,11 +147,11 @@ burger.classList.add("burger-unroll");
 burger.addEventListener("click", () => {
   burger.style.position = "fixed";
   if (SingoloModal.modal.classList.contains("modal-disappear")) {
-    SingoloModal.modalOpen();
+    SingoloModal.openModal();
     burger.classList.add("burger-roll");
     burger.classList.remove("burger-unroll");
   } else {
-    SingoloModal.modalClose();
+    SingoloModal.closeModal();
     burger.classList.add("burger-unroll");
     burger.classList.remove("burger-roll");
   }
@@ -168,10 +165,8 @@ function delay(ms) {
 //closing window with links
 SingoloModal.nav.addEventListener("click", (e) => {
   if (e.target.classList.contains("modal__nav__links")) {
-    SingoloModal.modalClose();
+    SingoloModal.closeModal();
     burger.classList.add("burger-unroll");
     burger.classList.remove("burger-roll");
   }
 });
-
-console.log(SingoloModal.nav);

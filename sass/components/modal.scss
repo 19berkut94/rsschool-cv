@@ -1,109 +1,125 @@
 $header-text: #ffffff;
 $base-red: #f06c64;
 
-.overlay{
-    background: rgba(45, 48, 58, 0.6);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+.overlay {
+  background: rgba(45, 48, 58, 0.6);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
-.modal{
-    background: rgba(45, 48, 58, 1);
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 0rem;
-    height: 100%;    
+.modal {
+  background: rgba(45, 48, 58, 1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0rem;
+  height: 100%;
 }
 
-.modal__content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal__logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1.4rem 0 18.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.4rem 0 18.4rem;
 }
 
 .modal__logo__title {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .modal__nav {
-    display: flex;
-    flex-direction: column;
-    height: 26rem;
-    width: 19.5rem;
-    justify-content: space-between;
-    align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  height: 26rem;
+  width: 19.5rem;
+  justify-content: space-between;
+  align-self: flex-end;
 }
 
 .modal__nav__links {
-text-decoration: none;
-text-transform: uppercase;
-@include font;
-font-weight: 700;
-font-size: 2.4rem;
-line-height: 2.9rem;
-letter-spacing: -0.035rem;
-color: $header-text;
-transition: all 0.3s linear;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include font;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  letter-spacing: -0.035rem;
+  color: $header-text;
+  transition: all 0.3s linear;
 
-&:hover {
+  &:hover {
     text-decoration: underline;
     color: $base-red;
-}
+  }
 }
 
 //--------------animation for burger and modal-------
 
 @keyframes show {
-    0% {width: 0;}
-    100% {width: 30rem;}
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30rem;
+  }
 }
 
 @keyframes hide {
-    0% {width: 30rem}
-    100% {width: 0;}
+  0% {
+    width: 30rem;
+  }
+  100% {
+    width: 0;
+  }
 }
 
-.modal-appear{  
- animation-name: show;
- animation-duration: 1.5s;
- animation-fill-mode: forwards;
+.modal-appear {
+  animation-name: show;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
-.modal-disappear{
-    animation-name: hide;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
+.modal-disappear {
+  animation-name: hide;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes burgerOn{
-    0% {transform: rotate(0deg)};
-    100% {transform: rotate(90deg);}
+@keyframes burgerOn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
 }
 
-@keyframes burgerOff{
-    0% {transform: rotate(90deg)};
-    100% {transform: rotate(0deg);}
+@keyframes burgerOff {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
-.burger-roll{
-    animation-name: burgerOn;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
+.burger-roll {
+  animation-name: burgerOn;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
-.burger-unroll{
-    animation-name: burgerOff;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
+.burger-unroll {
+  animation-name: burgerOff;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
