@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  min-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@import "calculator.scss";
+@import "mixin.scss";
+@import "buttons.scss";

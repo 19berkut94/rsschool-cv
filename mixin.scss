@@ -1,0 +1,10 @@
+@mixin btn {
+    background: rgb(180, 113, 113);
+    color: rgb(221, 196, 196);
+    width: 70px;
+    height: 60px;
+    margin: 10px;
+    font-size: 20px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+}
