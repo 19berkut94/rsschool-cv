@@ -48,23 +48,23 @@ body {
   width: 380px;
 }
 
-.layout-3-column {
+.left-3-button-column {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: calc(100% - 110px);
 }
 
-.layout-3-column :nth-child(13) {
+.left-3-button-column :nth-child(13) {
   flex-grow: 2;
 }
 
-.layout-1-column {
+.right-1-button-column {
   display: flex;
   flex-direction: column;
 }
 
-.layout-1-column :nth-child(4) {
+.right-1-button-column :nth-child(4) {
   flex-grow: 2;
 }
 

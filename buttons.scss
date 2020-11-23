@@ -5,7 +5,7 @@
     width: 380px;
 }
 
-.layout-3-column{
+.left-3-button-column{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,7 +16,7 @@
     }
 }
 
-.layout-1-column{
+.right-1-button-column{
     display: flex;
     flex-direction: column;
 

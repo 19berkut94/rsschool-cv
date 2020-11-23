@@ -36,7 +36,7 @@ function makeNumbersPush() {
         operandsAnswer = "";
         display.value = "0";
         clickNumbers(e.target.textContent);
-      } else if (operandsAnswer === "") {
+      } else {
         clickNumbers(e.target.textContent);
       }
     });
