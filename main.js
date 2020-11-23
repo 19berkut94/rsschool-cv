@@ -17,7 +17,8 @@ function makeCalculatorWork() {
   makeNumbersPush();
   makeOperatorsOperate();
   makeClearButtonsClean();
-  makeDecimalUse()
+  makePointUse()
+  makeResultShow()
 }
 
 function makeNumbersPush() {
@@ -68,26 +69,13 @@ function makeOperatorsOperate() {
 
   for (let i = 0; i < operators.length; i++) {
     let operator = operators[i];
-  
     operator.addEventListener("click", function (e) {
       clickOperators(e.target.textContent);
     });
-  
-    result.onclick = function () {
-      if (operandFirst !== "") {
-        operandSecond = Number(display.value);
-        operandsAnswer = eval(
-          `${operandFirst}${memoryOperator} ${operandSecond}`
-        );
-        display.value = operandsAnswer;
-        operandFirst = "";
-        operandSecond = "";
-      }
-    };
   }
 }
 
-function makeDecimalUse() {
+function makePointUse() {
   point.onclick = function () {
     if (display.value === "0" || display.value === "") {
       display.value = "0.";
@@ -123,4 +111,18 @@ function makeClearButtonsClean() {
       clear(e.target.textContent);
     });
   }
+}
+
+function makeResultShow() {
+  result.onclick = function () {
+    if (operandFirst !== "") {
+      operandSecond = Number(display.value);
+      operandsAnswer = eval(
+        `${operandFirst}${memoryOperator} ${operandSecond}`
+      );
+      display.value = operandsAnswer;
+      operandFirst = "";
+      operandSecond = "";
+    }
+  };
 }
