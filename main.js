@@ -11,72 +11,70 @@ let operandSecond = "";
 let operandsAnswer = "";
 let memoryOperator = "";
 
-makeCalculatorWork();
+initializeCalculator();
 
-function makeCalculatorWork() {
-  makeNumbersPush();
-  makeOperatorsOperate();
-  makeClearButtonsClean();
-  makePointUse()
-  makeResultShow()
+function initializeCalculator() {
+  addArrayHandler(numbers, clickNumbers);
+  addArrayHandler(operators, clickOperators);
+  addArrayHandler(clearButtons, clear);
+  addElementHandler(result, showResult);
+  addElementHandler(point, usePoint);
 }
 
-function makeNumbersPush() {
-  function clickNumbers(number) {
+  function clickNumbers(event) {
+    if (operandsAnswer !== "") {
+      operandsAnswer = "";
+      display.value = "0";
+    }
     if (display.value === "0") {
-      display.value = number;
+      display.value = event.target.textContent;
     } else {
-      display.value += number;
+      display.value += event.target.textContent;
     }
   }
 
-  for (let i = 0; i < numbers.length; i++) {
-    let num = numbers[i];
-    num.addEventListener("click", function (e) {
-      if (operandsAnswer !== "") {
-        operandsAnswer = "";
-        display.value = "0";
-        clickNumbers(e.target.textContent);
-      } else {
-        clickNumbers(e.target.textContent);
-      }
-    });
-  }
-}
-
-function makeOperatorsOperate() {
-  function clickOperators(op) {
+  function clickOperators(event) {
     if (operandFirst === "") {
-      memoryOperator = op;
+      memoryOperator = event.target.textContent;
       operandFirst = Number(display.value);
       display.value = "";
     } else {
-      if (operandFirst !== "" && Number(display.value)) {
-        operandSecond = display.value;
-        operandsAnswer = eval(
-          `${operandFirst}${memoryOperator} ${operandSecond}`
-        );
+        operandSecond = Number(display.value);
+
+       switchMemoryOperator()
+        
         display.value = operandsAnswer;
-        memoryOperator = op;
+        memoryOperator = event.target.textContent;
         operandFirst = "";
         if (operandSecond !== "" && operandsAnswer !== "") {
           operandFirst = operandsAnswer;
         }
-        //vopros----------------------------------
-      }
     }
   }
 
-  for (let i = 0; i < operators.length; i++) {
-    let operator = operators[i];
-    operator.addEventListener("click", function (e) {
-      clickOperators(e.target.textContent);
-    });
+  function clear(event) {
+    if (event.target.textContent === "ce") {
+      display.value = "0";
+    } else {
+      display.value = "0";
+      operandFirst = "";
+      operandSecond = "";
+    }
   }
-}
 
-function makePointUse() {
-  point.onclick = function () {
+  function showResult() {
+    if (operandFirst !== "") {
+      operandSecond = Number(display.value);
+      
+      switchMemoryOperator()
+
+      display.value = operandsAnswer;
+      operandFirst = "";
+      operandSecond = "";
+    }
+  };
+
+  function usePoint() {
     if (display.value === "0" || display.value === "") {
       display.value = "0.";
     } else if (!display.value.includes(".")) {
@@ -86,43 +84,34 @@ function makePointUse() {
         operandsAnswer = "";
       }
     } else {
-      if (operandsAnswer !== "" && String(display.value).includes(".")) {
         display.value = "0.";
         operandsAnswer = "";
-      }
     }
   };
-}
 
-function makeClearButtonsClean() {
-  function clear(cancelButton) {
-    if (cancelButton === "ce") {
-      display.value = "0";
-    } else if (cancelButton === "c") {
-      display.value = "0";
-      operandFirst = "";
-      operandSecond = "";
-    }
-  }
-
-  for (let i = 0; i < clearButtons.length; i++) {
-    let cancelButton = clearButtons[i];
-    cancelButton.addEventListener("click", function (e) {
-      clear(e.target.textContent);
-    });
+function addArrayHandler(array, callback) {
+  for(let i = 0; i < array.length; i++) {
+    array[i].addEventListener('click', callback)
   }
 }
 
-function makeResultShow() {
-  result.onclick = function () {
-    if (operandFirst !== "") {
-      operandSecond = Number(display.value);
-      operandsAnswer = eval(
-        `${operandFirst}${memoryOperator} ${operandSecond}`
-      );
-      display.value = operandsAnswer;
-      operandFirst = "";
-      operandSecond = "";
-    }
-  };
+function addElementHandler(element, callback) {
+  element.addEventListener('click', callback)
+}
+
+function switchMemoryOperator() {
+  switch (memoryOperator) {
+    case '+':
+      operandsAnswer = operandFirst + operandSecond;
+      break;
+    case '-':
+      operandsAnswer = operandFirst - operandSecond;
+      break;
+    case '*':
+      operandsAnswer = operandFirst * operandSecond;
+      break;
+    case '/':
+      operandsAnswer = operandFirst / operandSecond;
+      break;
+  }
 }
