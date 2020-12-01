@@ -1,0 +1,1 @@
+*{padding:0;margin:0;box-sizing:border-box}.application{display:flex;height:100vh;flex-direction:column;justify-content:center;align-items:center;background-color:wheat;color:rgba(145,34,34,0.774);text-transform:capitalize}#time{font-size:100px}@media (max-width: 700px){#time{font-size:60px}}
