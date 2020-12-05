@@ -13,10 +13,22 @@ function initializeLandingPage() {
   setGreetingAndBackground();
   getDataItem(name);
   getDataItem(goal);
-  name.addEventListener("blur", setName);
-  goal.addEventListener("blur", setGoal);
-  name.addEventListener("keypress", setName);
-  goal.addEventListener("keypress", setGoal);
+
+  name.addEventListener("blur", (e) => {
+    setDataToLocalStorage(e, name);
+  });
+
+  goal.addEventListener("blur", (e) => {
+    setDataToLocalStorage(e, goal);
+  });
+
+  name.addEventListener("keypress", (e) => {
+    setDataToLocalStorage(e, name);
+  });
+
+  goal.addEventListener("keypress", (e) => {
+    setDataToLocalStorage(e, goal);
+  });
 }
 
 function showDate() {
@@ -29,9 +41,7 @@ function showDate() {
     amPm = "PM";
     hour -= 12;
   }
-  time.innerHTML = `${hour} <span>:</span> ${addZero(
-    min
-  )} <span>:</span> ${addZero(sec)} ${amPm}`;
+  time.innerText = `${hour} : ${addZero(min)} : ${addZero(sec)} ${amPm}`;
 }
 
 function addZero(n) {
@@ -68,20 +78,9 @@ function getDataItem(dataItem) {
   }
 }
 
-function setName(e) {
-  if (e.type === "keypress" && e.keyCode == 13) {
-    localStorage.setItem("name", e.target.innerText);
-    name.blur();
-  } else {
-    localStorage.setItem("name", e.target.innerText);
-  }
-}
-
-function setGoal(e) {
-  if (e.type === "keypress" && e.keyCode == 13) {
-    localStorage.setItem("goal", e.target.innerText);
-    goal.blur();
-  } else {
-    localStorage.setItem("goal", e.target.innerText);
+function setDataToLocalStorage(e, dataItem) {
+  localStorage.setItem(dataItem.getAttribute("id"), e.target.innerText);
+  if (e.type === "keypress" && e.code === 'Enter') {
+    dataItem.blur();
   }
 }
