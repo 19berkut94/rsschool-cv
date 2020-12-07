@@ -50,22 +50,21 @@ function chooseMood() {
 
 function chooseInterval() {
   chosenInterval = this.getAttribute('data-time')
-  timeDisplay.innerText = `${Math.floor(chosenInterval / 60)} : ${Math.floor(chosenInterval % 60)}`
+  timeDisplay.innerText = `${addZero(Math.floor(chosenInterval / 60))} : ${addZero(Math.floor(chosenInterval % 60))}`
 }
 
 function updatePlaying() {
   outline.style.strokeDashoffset = outlineLength;
   outline.style.strokeDasharray = outlineLength;
-  timeDisplay.innerText = `${Math.floor(chosenInterval / 60)} : ${Math.floor(
-    chosenInterval % 60
-  )}`;
+  timeDisplay.innerText = `${addZero(Math.floor(chosenInterval / 60))} : ${addZero(Math.floor(chosenInterval % 60))}`;
 
   song.addEventListener('timeupdate', function() {
     let currentTime = song.currentTime
     let restTime = chosenInterval - currentTime
     let seconds = Math.floor(restTime % 60)
     let minutes = Math.floor(restTime / 60)
-    timeDisplay.innerText = `${minutes} : ${seconds}`
+
+    timeDisplay.innerText = `${addZero(minutes)} : ${addZero(seconds)}`
 
     let progress = outlineLength - (currentTime / chosenInterval) * outlineLength;
     outline.style.strokeDashoffset = progress;
@@ -84,4 +83,13 @@ function addElementHandler(array, callback) {
   array.forEach(el => {
     el.addEventListener('click', callback)
   })
+}
+
+function addZero(num) {
+  if(num < 10) {
+   return (num = '0' + String(num))
+  }
+  else {
+    return (num = '' + String(num))
+  }
 }
