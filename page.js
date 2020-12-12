@@ -1,9 +1,9 @@
 "use strict";
 
-const time = document.getElementById("time");
-const name = document.getElementById("name");
-const goal = document.getElementById("goal");
-const app = document.querySelector(".application");
+let time = document.getElementById("time");
+let name = document.getElementById("name");
+let goal = document.getElementById("goal");
+let app = document.querySelector(".application");
 
 initializeLandingPage();
 
@@ -71,10 +71,10 @@ function setGreetingAndBackground() {
 }
 
 function getDataItem(dataItem) {
-  if (localStorage.getItem(dataItem) === null) {
+  if (localStorage.getItem(`${dataItem.getAttribute('id')}`) === null) {
     dataItem.textContent = `[Enter ${dataItem.getAttribute("id")}]`;
   } else {
-    dataItem.textContent = localStorage.getItem(dataItem);
+    dataItem.textContent = localStorage.getItem(`${dataItem.getAttribute('id')}`);
   }
 }
 
