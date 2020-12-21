@@ -9,7 +9,7 @@ html {
 }
 
 .app-container {
-  background-image: url("/bg.jpg");
+  background-image: url("/rsschool-cv/bg.jpg");
   width: 100%;
   height: 100vh;
   display: flex;
@@ -37,7 +37,7 @@ html {
   color: whitesmoke;
   text-transform: uppercase;
   background-color: rgba(26, 26, 23, 0.397);
-  text-shadow: 0 0 .5rem black;
+  text-shadow: 0 0 0.5rem black;
   transition: all 0.2s ease;
 }
 
