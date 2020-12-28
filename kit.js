@@ -8,7 +8,7 @@ function startDrumKit() {
     key.addEventListener('transitionend', removeTransition)
     })
 
-    window.addEventListener('keydown', playSound)
+    window.addEventListener('keyup', playSound)
 }
 
 function removeTransition(e) {
