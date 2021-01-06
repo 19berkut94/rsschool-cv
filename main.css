@@ -11,15 +11,21 @@
     height: 100vh;
     background-color: rgba(165, 118, 118, 0.445);
   }
-  
+
+ 
   .player__controls {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-      height: 40px;
-      background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: cadetblue;
   }
   
   .player__button {
@@ -30,4 +36,21 @@
   .player__button img {
       width: 100%;
   }
+
+  .progress {
+      width: 100%;
+      height: 20px;
+      background-color: rgb(39, 23, 109);
+  }
+
+  .progress__filled {
+      width: 0%;
+      background-color: brown;
+      height: 20px;
+  }
   
+  .skip__button {
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+  }
