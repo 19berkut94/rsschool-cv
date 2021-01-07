@@ -4,15 +4,24 @@
     box-sizing: border-box;
 }
 
-
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(206, 235, 148);
+}
 
 .container {
-    background-color: tomato;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+}
+
+.video {
+    border-radius: 5%;
+    outline: none;
 }
 
 .speed {
