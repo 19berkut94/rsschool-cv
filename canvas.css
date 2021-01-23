@@ -11,7 +11,6 @@ body {
     width: 300px;
     height: 150px;
     background: blueviolet;
-    opacity: 0.8;
     position: absolute;
     top: 40%;
     left: 40%;
@@ -23,4 +22,6 @@ body {
     align-items: center;
     text-decoration: none;
     transition: all 3s linear;
+    opacity: 1;
 }
+
